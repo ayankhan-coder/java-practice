@@ -16,7 +16,7 @@ class Employee{         //----- Making first custom class
     int salary;
     String name;
     public int getSalary(){
-        return salary;   //hello
+        return salary;
     }
     public String getName(){
         return name;
