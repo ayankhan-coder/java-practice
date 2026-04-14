@@ -1,6 +1,6 @@
 /*INHERITANCE IN JAVA*/
 
-class animal{                               // L1-----INHERITANCE PARENT AND CHILD CLASS
+class Animal{                               // L1-----INHERITANCE PARENT AND CHILD CLASS
     public void walking(){
         System.out.println("they can walking!!");
     }
@@ -8,7 +8,7 @@ class animal{                               // L1-----INHERITANCE PARENT AND CHI
         System.out.println("they can eating!!");
     }
 }
-class dog extends animal{
+class dog extends Animal{
     public void barking(){
         System.out.println("they can barking!!!");
     }
@@ -202,7 +202,7 @@ class Instagram extends WhatsApp{
 public class Inheritance_ch_10 {
     public static void main(String[] args) {
 //INHERITANCE IN JAVA
-        animal a=new animal();               //L1-----INHERITANCE PARENT AND CHILD CLASS
+        Animal a=new Animal();               //L1-----INHERITANCE PARENT AND CHILD CLASS
         a.walking();  //parent calling itself
         a.eating();
 // 	a.barking();              this will error bcz parent can't use child things
