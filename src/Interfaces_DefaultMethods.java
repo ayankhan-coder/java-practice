@@ -1,7 +1,7 @@
 
 
 /*JAVA INTERFACES AND DEFAULT METHODS*/
-interface Camera{
+interface Camera{                         // L1------Interfaces-default-private
     void takeSnap();
     void recordVideo();
     private void greet(){//Private Method
@@ -49,11 +49,38 @@ class MySmartPhone extends MyCellPhone implements Camera,Wifi{
         System.out.println("connected To Network");
     }
 }
+
+
+/*interface Calling {                     // L2------Inheritance in Interfaces
+    void call();
+}
+
+interface Camera1 {
+    void camera();
+}
+interface Music {
+    void music();
+}
+interface SmartDevice extends Calling, Camera1, Music {}
+class IPhone implements SmartDevice {
+    @Override
+    public void camera() {
+        System.out.println("Clicking Photos");
+    }
+    @Override
+    public void call() {
+        System.out.println("Calling");
+    }
+    @Override
+    public void music() {
+        System.out.println("Playing Music");
+    }
+}*/
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 public class Interfaces_DefaultMethods {
     public static void main(String[] args) {
 
-        MySmartPhone ms = new MySmartPhone();
+        MySmartPhone ms = new MySmartPhone();          // L1------Interfaces-default-private
         ms.record4KVideo();
         String[] arr = ms.getNetworks();
         for (String element:arr){
@@ -61,17 +88,9 @@ public class Interfaces_DefaultMethods {
         }
         ms.connectToNetwork();
 
-
-
-
-
-
-
-
-
-
-
-
+       /* IPhone iPhone = new IPhone();                // L2------Inheritance in Interfaces
+        iPhone.music();
+        iPhone.camera();*/
 
     }
 }
