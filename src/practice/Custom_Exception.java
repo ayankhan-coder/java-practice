@@ -76,8 +76,25 @@ public class Custom_Exception {
         }*/
 
 
+        int[] arr = {10, 20, 30, 40, 50};
+        while (true){
+            int index;
+            try {
 
-        
+                System.out.println("Enter Index : ");
+                index = sc.nextInt();
+                System.out.println(arr[index]);
+
+            }catch (ArrayIndexOutOfBoundsException e){
+                System.out.println("Sorry This Index DoesNot Exists");
+                System.out.println(e.toString());
+            }
+        }
+
+
+
+
+
 
 
 
