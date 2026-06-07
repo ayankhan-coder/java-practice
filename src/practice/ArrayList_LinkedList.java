@@ -1,7 +1,10 @@
 package practice;
 import java.util.ArrayList;
-public class Array_List {
+import java.util.LinkedList;
+
+public class ArrayList_LinkedList {
     public static void main(String[] args) {
+        /*ARRAY LIST*/
         ArrayList<Integer> l1 = new ArrayList<>();
         l1.add(10);
         l1.add(20);
@@ -24,6 +27,18 @@ public class Array_List {
         l1.add(1,20);
 
 
+        /*LINKED LIST*/
+        LinkedList<String> names = new LinkedList<>();
+        names.add("ramesh");
+        names.add("sultan");
+        names.add("suresh");
+        System.out.println(names.getFirst());
+        System.out.println(names.getLast());
+        System.out.println(names.removeLast());
+        System.out.println(names);
+        names.remove("ramesh");
+        names.remove("suresh");
+        System.out.println(names);
 
     }
 }
