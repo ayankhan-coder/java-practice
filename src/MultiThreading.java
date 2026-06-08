@@ -19,5 +19,7 @@ public class MultiThreading {
         t1.start();
         t2.start();
 
+
+
     }
 }
