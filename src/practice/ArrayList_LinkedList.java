@@ -1,4 +1,5 @@
 package practice;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -40,5 +41,11 @@ public class ArrayList_LinkedList {
         names.remove("suresh");
         System.out.println(names);
 
+        /*Array Deque*/
+        ArrayDeque<Integer> ad = new ArrayDeque<>();
+        ad.add(10);
+        ad.add(30);
+        ad.removeLast();
+        System.out.println(ad.peekFirst());
     }
 }
