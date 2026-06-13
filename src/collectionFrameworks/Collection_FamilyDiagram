@@ -5,7 +5,8 @@ COLLECTIONS FRAMEWORK
 │   ├── ArrayList (Class) ⭐⭐⭐⭐⭐    🍏
 │   ├── LinkedList (Class) ⭐⭐⭐       🍏
 │   └── Vector (Class) ⭐
-│
+│          ↑
+|        Stack                           🍏
 ├── Set (Interface)
 │   │
 │   ├── HashSet (Class) ⭐⭐⭐⭐        🍏
@@ -24,3 +25,10 @@ COLLECTIONS FRAMEWORK
     ├── LinkedHashMap (Class) ⭐⭐
     ├── TreeMap (Class) ⭐⭐
     └── Hashtable (Class) ⭐
+
+    ArrayList   ✅ supports indexing
+    LinkedList  ✅ supports indexing
+    Stack       ✅ supports indexing
+    HashSet     ❌ no indexing
+    HashMap     ❌ no indexing (uses keys)
+    Queue       ❌ queue operations are the focus
