@@ -1,4 +1,4 @@
-package practice;
+package CollectionFrameworks;
 
 import java.util.HashMap;
 import java.util.HashSet;
