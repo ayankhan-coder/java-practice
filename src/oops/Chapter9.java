@@ -1,4 +1,4 @@
-package practice;
+package oops;
 
 class MyEmployee{             // L1------ GETTERS AND SETTERS
     private String name;

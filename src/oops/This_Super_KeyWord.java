@@ -1,4 +1,4 @@
-package practice;/* THIS & SUPER keyWord in Java */
+package oops;/* THIS & SUPER keyWord in Java */
 
 class Person {                  // L1 ----------
     String name;
@@ -36,7 +36,7 @@ class Vehicle {
     }
 }
 
-/*class oops.Car extends practice.Vehicle {           // L2 -----------
+/*class oops.Car extends oops.Vehicle {           // L2 -----------
     int price;
     String fuelType;
 
@@ -90,7 +90,7 @@ class SavingAccount extends Account {
         return (balance * interestRate) / 100;
     }
     public void displayDetails() {
-        System.out.println("practice.Account Holder: " + getAccountHolder());
+        System.out.println("oops.Account Holder: " + getAccountHolder());
         System.out.println("Balance: " + balance);
         System.out.println("Interest Rate: " + interestRate);
         System.out.println("Interest: " + calculateInterest());

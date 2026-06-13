@@ -1,4 +1,4 @@
-package Errors_Exceptions;
+package errorsException;
 
 class MyException extends Exception{               // L1 ---- Custom Exception
     public MyException(String message){

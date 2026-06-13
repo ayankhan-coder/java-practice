@@ -1,4 +1,4 @@
-package practice;
+package oops;
 
 class Employee{         //----- Making first custom class
     int id;

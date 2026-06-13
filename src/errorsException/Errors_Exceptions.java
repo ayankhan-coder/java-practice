@@ -1,4 +1,4 @@
-package Errors_Exceptions;
+package errorsException;
 
 public class Errors_Exceptions {
     public static void main(String[] args) {

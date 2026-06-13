@@ -1,4 +1,4 @@
-package practice;/*INHERITANCE IN JAVA*/
+package oops;/*INHERITANCE IN JAVA*/
 
 class Animal{                               // L1-----INHERITANCE PARENT AND CHILD CLASS
     public void walking(){
@@ -14,7 +14,7 @@ class Dog extends Animal{
     }
 }
 
-/*class practice.Base{                             // L2------ parent & child class
+/*class oops.Base{                             // L2------ parent & child class
     public int x;
     public int getX() {
         return x;
@@ -40,10 +40,10 @@ class d erived extends base{
 /*CONSTRUCTORS IN INHERITANCE*/
 class Base{                                                  // L3------CONSTRUCTORS IN INHERITANCE
     Base(){
-        System.out.println("i am practice.Base constructor");
+        System.out.println("i am oops.Base constructor");
     }
     Base(int a){
-        System.out.println("i am overloaded constructor of practice.Base value of a :"+a);
+        System.out.println("i am overloaded constructor of oops.Base value of a :"+a);
     }
 }
 class Derived extends Base{
@@ -52,13 +52,13 @@ class Derived extends Base{
     }
     Derived(int x,int y){
         super();
-        System.out.println("i am overloaded constructor of practice.Derived with value of x&y :"+x + y);
+        System.out.println("i am overloaded constructor of oops.Derived with value of x&y :"+x + y);
     }
 }
 class ChildOfDerived extends Derived{
     ChildOfDerived() {
         super(10,20);
-        System.out.println("i am practice.ChildOfDerived constructor");
+        System.out.println("i am oops.ChildOfDerived constructor");
     }
 }
 
@@ -157,19 +157,19 @@ class College extends School{
 /*DYNAMIC METHOD DISPATCH(DMD)*/
 class Phone{                             // L9---- Dynamic Method Dispatch
     public void on(){
-        System.out.println("Turning On practice.Phone--");
+        System.out.println("Turning On oops.Phone--");
     }
     public void call(){
-        System.out.println("Calling With practice.Phone...");
+        System.out.println("Calling With oops.Phone...");
     }
 }
 class SmartPhone extends Phone{
     @Override
     public void on(){
-        System.out.println("Turning On practice.SmartPhone--");
+        System.out.println("Turning On oops.SmartPhone--");
     }
     public void playMusic(){
-        System.out.println("Music Playing in practice.SmartPhone~~~~~");
+        System.out.println("Music Playing in oops.SmartPhone~~~~~");
     }
 }
 
@@ -212,7 +212,7 @@ public class Inheritance_ch_10 {
         d.eating();
         d.barking();
 
-        /*practice.Derived c = new practice.Derived();                           // L2------ parent & child class
+        /*oops.Derived c = new oops.Derived();                           // L2------ parent & child class
         System.out.println("this is a child object calling itself and parent ");
         c.setY(10);
         System.out.println(c.getY());
