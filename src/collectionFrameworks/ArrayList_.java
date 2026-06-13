@@ -1,4 +1,4 @@
-package CollectionFrameworks;
+package collectionFrameworks;
 
 
 public class ArrayList_ {

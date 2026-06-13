@@ -1,4 +1,4 @@
-package practice;
+package Errors_Exceptions;
 
 class MyException extends Exception{               // L1 ---- Custom Exception
     public MyException(String message){
@@ -90,22 +90,6 @@ public class Custom_Exception {
                 System.out.println(e.toString());
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

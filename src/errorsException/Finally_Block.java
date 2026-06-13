@@ -1,4 +1,4 @@
-package practice;/*finally is used to close resources but in modern java we use
+package Errors_Exceptions;/*finally is used to close resources but in modern java we use
 try-with-resource*/
 
 public class Finally_Block {

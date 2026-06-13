@@ -1,4 +1,4 @@
-package CollectionFrameworks;
+package collectionFrameworks;
 
 public class ArrayDeque_ {
     public static void main(String[] args) {

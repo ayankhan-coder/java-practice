@@ -1,5 +1,5 @@
-package CollectionFrameworks;
-import java.util.LinkedList;
+package collectionFrameworks;
+
 public class LinkedList_ {
     public static void main(String[] args) {
         /*LINKED LIST*/

@@ -36,16 +36,16 @@ class Vehicle {
     }
 }
 
-/*class practice.Car extends practice.Vehicle {           // L2 -----------
+/*class oops.Car extends practice.Vehicle {           // L2 -----------
     int price;
     String fuelType;
 
-    public practice.Car(String brand, int price) {
+    public oops.Car(String brand, int price) {
         super(brand);
         this.price = price;
         this.fuelType = "Petrol";   //  default
     }
-    public practice.Car(String brand, int price, String fuelType) {
+    public oops.Car(String brand, int price, String fuelType) {
         super(brand);
         this.price = price;
         this.fuelType = fuelType;
@@ -111,8 +111,8 @@ class This_Super_keyWord{
         System.out.println(s.getCourse());
 
 
-       /* practice.Car c1 = new practice.Car("Toyota", 500000);           // L2 ----------
-        practice.Car c2 = new practice.Car("Mahindra", 900000, "Diesel");
+       /* oops.Car c1 = new oops.Car("Toyota", 500000);           // L2 ----------
+        oops.Car c2 = new oops.Car("Mahindra", 900000, "Diesel");
 
         c1.displayDetails();
         c2.displayDetails();*/
