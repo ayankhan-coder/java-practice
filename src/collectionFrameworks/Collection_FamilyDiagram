@@ -2,25 +2,25 @@ COLLECTIONS FRAMEWORK
 │
 ├── List (Interface)
 │   │
-│   ├── ArrayList (Class) ⭐⭐⭐⭐⭐
-│   ├── LinkedList (Class) ⭐⭐⭐
+│   ├── ArrayList (Class) ⭐⭐⭐⭐⭐    🍏
+│   ├── LinkedList (Class) ⭐⭐⭐       🍏
 │   └── Vector (Class) ⭐
 │
 ├── Set (Interface)
 │   │
-│   ├── HashSet (Class) ⭐⭐⭐⭐
+│   ├── HashSet (Class) ⭐⭐⭐⭐        🍏
 │   ├── LinkedHashSet (Class) ⭐⭐
 │   └── TreeSet (Class) ⭐⭐
 │
 ├── Queue (Interface)
 │   │
-│   ├── LinkedList (Class) ⭐⭐⭐
+│   ├── LinkedList (Class) ⭐⭐⭐        🍏
 │   ├── PriorityQueue (Class) ⭐⭐
 │   └── ArrayDeque (Class) ⭐⭐⭐
 │
 └── Map (Interface)
     │
-    ├── HashMap (Class) ⭐⭐⭐⭐⭐
+    ├── HashMap (Class) ⭐⭐⭐⭐⭐      🍏
     ├── LinkedHashMap (Class) ⭐⭐
     ├── TreeMap (Class) ⭐⭐
     └── Hashtable (Class) ⭐
