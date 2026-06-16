@@ -1,4 +1,4 @@
-package practice;
+package basics;
 
 public class loops {
     public static void main(String[] args) {

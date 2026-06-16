@@ -1,4 +1,4 @@
-package practice;
+package basics;
 
 public class Tasks {
     static int fib(int n){      // P5------ fibonacci series
