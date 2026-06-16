@@ -11,7 +11,7 @@ COLLECTIONS FRAMEWORK
 │   │
 │   ├── HashSet (Class) ⭐⭐⭐⭐        🍏
 │   ├── LinkedHashSet (Class) ⭐⭐
-│   └── TreeSet (Class) ⭐⭐
+│   └── TreeSet (Class) ⭐⭐             🍏
 │
 ├── Queue (Interface)
 │   │
