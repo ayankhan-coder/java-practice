@@ -1,21 +1,10 @@
 package collectionFrameworks;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
-public class HashSet_HashMap {
+public class HashMap_ {
     public static void main(String[] args) {
-
-        HashSet<Integer> set = new HashSet<>();
-        set.add(10);
-        set.add(10);
-        set.add(20);
-        set.add(30);
-        set.add(null);
-        set.remove(10);
-        System.out.println(set);
-        System.out.println("=================================");
 
         HashMap<Integer , String> students = new HashMap<>();
         students.put(101,"khan");
@@ -34,7 +23,7 @@ public class HashSet_HashMap {
             System.out.println(e.getKey());
             System.out.println(e.getValue());
         }
-            System.out.println(students.entrySet());
+        System.out.println(students.entrySet());
         System.out.println(students);
 
     }

@@ -16,8 +16,8 @@ COLLECTIONS FRAMEWORK
 ├── Queue (Interface)
 │   │
 │   ├── LinkedList (Class) ⭐⭐⭐        🍏
-│   ├── PriorityQueue (Class) ⭐⭐
-│   └── ArrayDeque (Class) ⭐⭐⭐
+│   ├── PriorityQueue (Class) ⭐⭐       🍏
+│   └── ArrayDeque (Class) ⭐⭐⭐        🍏
 │
 └── Map (Interface)
     │
