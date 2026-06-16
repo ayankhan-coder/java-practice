@@ -26,6 +26,21 @@ COLLECTIONS FRAMEWORK
     ├── TreeMap (Class) ⭐⭐
     └── Hashtable (Class) ⭐
 
+    Collections Framework
+    List Family
+    ✅ ArrayList
+    ✅ LinkedList
+    Set Family
+    ✅ HashSet
+    ✅ TreeSet
+    Queue Family
+    ✅ Queue
+    ✅ PriorityQueue
+    ✅ Deque (ArrayDeque)
+    Map Family
+    ✅ HashMap
+    ⬜ TreeMap
+
     ArrayList   ✅ supports indexing
     LinkedList  ✅ supports indexing
     Stack       ✅ supports indexing
