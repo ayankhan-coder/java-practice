@@ -1,6 +1,6 @@
 package collectionFrameworks;
 /*TreeSet is a Set implementation that stores unique elements
-in sorted order*/
+in sorted order.*/
 
 import java.util.TreeSet;
 
