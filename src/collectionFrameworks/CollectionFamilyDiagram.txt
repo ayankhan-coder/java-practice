@@ -47,3 +47,43 @@ COLLECTIONS FRAMEWORK
     HashSet     ❌ no indexing
     HashMap     ❌ no indexing (uses keys)
     Queue       ❌ queue operations are the focus
+
+    Now when someone says:
+
+    Store unique values
+
+    you immediately think:
+
+    HashSet
+
+    When someone says:
+
+    Need key-value pairs
+
+    you think:
+
+    HashMap
+
+    When someone says:
+
+    Need FIFO
+
+    you think:
+
+    Queue
+
+    When someone says:
+
+    Need LIFO
+
+    you think:
+
+    Stack
+
+    When someone says:
+
+    Need sorted unique values
+
+    you think:
+
+    TreeSet

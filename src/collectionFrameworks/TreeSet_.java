@@ -15,6 +15,7 @@ public class TreeSet_ {
         treeSet.remove(20);
         for (int el : treeSet){
             System.out.println(el);
+
         }
     }
 }
