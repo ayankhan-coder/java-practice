@@ -23,7 +23,7 @@ COLLECTIONS FRAMEWORK
     │
     ├── HashMap (Class) ⭐⭐⭐⭐⭐      🍏
     ├── LinkedHashMap (Class) ⭐⭐
-    ├── TreeMap (Class) ⭐⭐
+    ├── TreeMap (Class) ⭐⭐             🍏
     └── Hashtable (Class) ⭐
 
     Collections Framework
