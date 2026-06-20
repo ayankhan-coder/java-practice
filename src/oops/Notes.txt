@@ -1,0 +1,132 @@
+Rule #1
+
+If there is only one type of object:
+
+Student
+
+then usually:
+
+No inheritance needed.
+When Inheritance Is Needed
+
+Suppose school has:
+
+Student
+Teacher
+Principal
+
+All have:
+
+name
+age
+phone
+
+Instead of:
+
+class Student{
+    String name;
+    int age;
+}
+
+class Teacher{
+    String name;
+    int age;
+}
+
+class Principal{
+    String name;
+    int age;
+}
+
+Repeated code ❌
+
+Use:
+
+class Person{
+    String name;
+    int age;
+}
+
+Then:
+
+class Student extends Person{
+}
+
+class Teacher extends Person{
+}
+
+class Principal extends Person{
+}
+
+Now all inherit:
+
+name
+age
+
+from Person.
+
+✅ This is a real inheritance use case.
+
+When Interface Is Needed
+
+Suppose:
+
+Student
+Teacher
+
+can login.
+
+You can create:
+
+interface Login{
+    void login();
+}
+
+Then:
+
+class Student implements Login
+class Teacher implements Login
+
+Now both must have:
+
+login()
+
+method.
+
+Real example:
+
+UPI
+Credit Card
+PayPal
+
+All implement:
+
+interface Payment
+
+with:
+
+pay()
+When Abstraction Is Needed
+
+Suppose every person has:
+
+login()
+logout()
+
+But login works differently.
+
+Student login:
+
+roll number
+
+Teacher login:
+
+employee id
+
+Then:
+
+abstract class User{
+    abstract void login();
+}
+
+Each class provides its own login.
