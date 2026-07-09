@@ -1,4 +1,4 @@
-package collectionFrameworks;
+package advanceCore;
  /*Generics in Java are a feature that allows classes, interfaces, and methods
   to work with different data types while providing type safety at compile time.
 
