@@ -1,3 +1,8 @@
+/*util.Calendar usually refers to java.util.Calendar, a class in Java
+used to represent and manipulate dates and times. Before Java 8, it was the standard API
+for date/time operations,but today it's largely replaced by the newer java.time API.
+ */
+
 package DateAndTime.Legacy;
 
 import java.util.Calendar;
@@ -12,6 +17,11 @@ public class Calender {
 
         cal.add(Calendar.MONTH,1);   // Add Method add extra value, More powerful than SetMethod
         cal.add(Calendar.YEAR,4);
+        System.out.println(cal.getTime());
+
+        System.out.println(cal.getTime());
+        cal.roll(Calendar.MONTH,1);  //Roll Method change only specific field
+        cal.roll(Calendar.YEAR,5);
         System.out.println(cal.getTime());
 
         System.out.println(cal.get(Calendar.YEAR));
