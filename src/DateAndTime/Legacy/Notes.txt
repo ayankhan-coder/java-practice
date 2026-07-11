@@ -144,3 +144,226 @@ Method	Real-world example	Usage frequency
 set()	User selects a date/time, alarm, birthday	⭐⭐⭐⭐ Very common
 add()	Expiry dates, subscriptions, hotel stays, loans, reminders	⭐⭐⭐⭐⭐ Extremely common (legacy code)
 roll()	Date picker or clock UI field editing	⭐ Rare
+
+_______________________~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~____________________________________________________________
+TIME ZONE NOTES
+
+# Java TimeZone Notes (Old Date & Time API)
+
+## 1. What is TimeZone?
+
+* `TimeZone` is a class in `java.util`.
+* It **does NOT store the current time**.
+* It stores the **time zone rules** of a particular region (India, Japan, Singapore, etc.).
+
+Example:
+
+```java
+TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
+```
+
+This means:
+
+> "Give me Tokyo's time zone rules."
+
+---
+
+## 2. Why do we need TimeZone?
+
+Different countries have different local times.
+
+Example:
+
+* India → UTC +5:30
+* Singapore → UTC +8:00
+* Tokyo → UTC +9:00
+
+Applications like Google Meet, Flight Booking, Amazon, Banking, etc. must display time according to the user's country.
+
+---
+
+## 3. Important Methods
+
+### Get Computer's Default TimeZone
+
+```java
+TimeZone tz = TimeZone.getDefault();
+```
+
+Returns the operating system's configured time zone.
+
+---
+
+### Get Any Specific TimeZone
+
+```java
+TimeZone tz = TimeZone.getTimeZone("Asia/Singapore");
+```
+
+Returns Singapore's TimeZone object.
+
+---
+
+### Get TimeZone ID
+
+```java
+tz.getID();
+```
+
+Example Output:
+
+```
+Asia/Singapore
+```
+
+---
+
+### Get Display Name
+
+```java
+tz.getDisplayName();
+```
+
+Example Output:
+
+```
+Singapore Standard Time
+```
+
+---
+
+### Get Raw Offset
+
+```java
+tz.getRawOffset();
+```
+
+Returns the difference from UTC in milliseconds.
+
+Example:
+
+```
+28800000
+```
+
+(8 hours)
+
+---
+
+## 4. Using TimeZone with Calendar
+
+```java
+TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
+
+Calendar cal = Calendar.getInstance(tz);
+
+System.out.println(cal.get(Calendar.HOUR_OF_DAY));
+```
+
+Meaning:
+
+1. Get Tokyo's TimeZone.
+2. Create a Calendar using Tokyo's time rules.
+3. Get Tokyo's current hour.
+
+---
+
+## 5. Two Ways of Writing
+
+### Recommended (Easy to Understand)
+
+```java
+TimeZone tz = TimeZone.getTimeZone("Asia/Singapore");
+
+Calendar cal = Calendar.getInstance(tz);
+```
+
+### Short Form
+
+```java
+Calendar cal = Calendar.getInstance(
+        TimeZone.getTimeZone("Asia/Singapore"));
+```
+
+Both are exactly the same.
+
+---
+
+## 6. Important Confusion
+
+This is WRONG:
+
+```java
+TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
+
+tz.getTime();   // ❌ Doesn't exist
+```
+
+Reason:
+
+TimeZone is NOT a clock.
+
+It only stores time zone information.
+
+Calendar uses those rules to calculate time.
+
+---
+
+## 7. Why did getTime() show IST?
+
+```java
+Calendar cal = Calendar.getInstance(
+        TimeZone.getTimeZone("Asia/Singapore"));
+
+System.out.println(cal.getTime());
+```
+
+Output may still show:
+
+```
+IST
+```
+
+Reason:
+
+`getTime()` returns a `Date` object.
+
+`Date.toString()` prints using the computer's default time zone.
+
+This is one of the biggest problems of the old Java Date-Time API.
+
+---
+
+## 8. Real-World Usage
+
+TimeZone is commonly used with:
+
+* Calendar
+* SimpleDateFormat
+* Date Formatting
+* Flight Booking Systems
+* Banking Applications
+* Video Meeting Applications
+* International Websites
+
+---
+
+## 9. Interview Question
+
+**Q:** Does TimeZone store current time?
+
+**Answer:**
+
+No.
+
+It only stores the rules of a particular time zone.
+
+Other classes like Calendar use those rules to calculate date and time.
+
+---
+
+## 10. Most Important Point
+
+Remember this sentence:
+
+> **TimeZone is a helper object. It is rarely used alone. It provides time zone rules that other classes (Calendar, SimpleDateFormat, etc.) use to calculate or display time correctly.**
