@@ -1,0 +1,146 @@
+1. set() – User chooses an exact value
+
+Use case: Booking a flight.
+
+Suppose a user selects:
+
+Year: 2027
+Month: March
+Day: 15
+
+The application simply sets those values.
+
+Calendar cal = Calendar.getInstance();
+
+cal.set(Calendar.YEAR, 2027);
+cal.set(Calendar.MONTH, Calendar.MARCH);
+cal.set(Calendar.DATE, 15);
+Why set()?
+
+Because the user is not adding days or months. They are choosing an exact date.
+
+Other examples:
+
+Setting an alarm for 7:00 AM.
+Setting a meeting to 2 PM.
+Setting a birthday.
+----------------------------
+2. add() – Calculate a future or past date
+
+This is the most commonly used method in legacy applications.
+
+Example 1: Subscription expires after 30 days
+
+Suppose someone buys Netflix today.
+
+Purchase Date:
+July 11
+
+The application needs the expiry date.
+
+Calendar expiry = Calendar.getInstance();
+
+expiry.add(Calendar.DATE, 30);
+
+Result:
+
+August 10
+
+If today were December 20,
+
+December 20 + 30 days
+
+add() automatically gives
+
+January 19 (next year)
+
+It correctly changes both the month and year.
+-----------------------------------------------
+3. roll() – Change only one field (rarely used)
+
+This method is rare in business applications.
+
+It is mainly useful for calendar or date picker UIs where changing one field should not affect the others.
+
+Example: Calendar Widget
+
+Imagine this date picker:
+
+Month: December
+Day: 30
+Year: 2025
+
+The user presses the up arrow on the day field.
+
+The UI changes:
+
+30
+↓
+
+31
+↓
+
+1
+↓
+
+2
+
+But the month should still display:
+
+December
+
+Using
+
+cal.roll(Calendar.DATE, 1);
+
+the day wraps within December instead of advancing to January.
+
+This lets the user edit the day independently before confirming the full date.
+
+Example: Digital Clock UI
+
+Suppose a user is editing minutes.
+
+Current time:
+
+10 : 59
+
+They press the up button.
+
+The UI becomes
+
+10 : 00
+
+not
+
+11 : 00
+
+because only the minutes should wrap while the hour stays the same until the user finishes editing.
+
+This is a typical use for roll().
+
+Why isn't roll() used much?
+
+Imagine an online shopping app.
+
+Delivery date:
+
+December 31
+
+Adding one day should result in
+
+January 1
+
+Using roll() would produce
+
+December 1
+
+which is incorrect for real-world date calculations.
+
+That's why business applications almost always use add() for date arithmetic.
+
+Which one is used the most?
+Method	Real-world example	Usage frequency
+set()	User selects a date/time, alarm, birthday	⭐⭐⭐⭐ Very common
+add()	Expiry dates, subscriptions, hotel stays, loans, reminders	⭐⭐⭐⭐⭐ Extremely common (legacy code)
+roll()	Date picker or clock UI field editing	⭐ Rare

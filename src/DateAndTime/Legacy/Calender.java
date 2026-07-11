@@ -6,6 +6,7 @@ for date/time operations,but today it's largely replaced by the newer java.time 
 package DateAndTime.Legacy;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Calender {
     public static void main(String[] args) {
@@ -31,8 +32,13 @@ public class Calender {
         System.out.println(cal.get(Calendar.MINUTE));
         System.out.println(cal.get(Calendar.SECOND));
         System.out.println(cal.get(Calendar.HOUR_OF_DAY));
+        System.out.println(cal.get(Calendar.HOUR)+":"+ cal.get(Calendar.MINUTE));
         System.out.println("______________________");
         System.out.println(cal.getTime());
+
+        GregorianCalendar c = new GregorianCalendar();
+
+        System.out.println(c.isLeapYear(2026));
 
     }
 }
