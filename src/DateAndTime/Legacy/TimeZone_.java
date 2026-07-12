@@ -1,8 +1,8 @@
 package DateAndTime.Legacy;
 
 import java.util.Calendar;
-
-public class TimeZone {
+import java.util.TimeZone;
+public class TimeZone_ {
     public static void main(String[] args) {
 
         Calendar india = Calendar.getInstance();//By Default india
@@ -14,7 +14,7 @@ public class TimeZone {
 
         System.out.println("---------------------------------------");
 
-        java.util.TimeZone tokyo = java.util.TimeZone.getTimeZone("Asia/Tokyo");
+        TimeZone tokyo = TimeZone.getTimeZone("Asia/Tokyo");
         Calendar japan = Calendar.getInstance(tokyo);
         System.out.print("Japan Time - ");
         System.out.print(japan.get(Calendar.HOUR_OF_DAY)+":");
@@ -24,7 +24,7 @@ public class TimeZone {
 
         System.out.println("---------------------------------------");
 
-        Calendar singapore = Calendar.getInstance(java.util.TimeZone.getTimeZone("Asia/Singapore"));
+        Calendar singapore = Calendar.getInstance(TimeZone.getTimeZone("Asia/Singapore"));
         System.out.print("Singapore Time - ");
         System.out.print(singapore.get(Calendar.HOUR_OF_DAY)+":");
         System.out.print(singapore.get(Calendar.MINUTE)+":");

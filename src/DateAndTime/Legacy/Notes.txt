@@ -367,3 +367,23 @@ Other classes like Calendar use those rules to calculate date and time.
 Remember this sentence:
 
 > **TimeZone is a helper object. It is rarely used alone. It provides time zone rules that other classes (Calendar, SimpleDateFormat, etc.) use to calculate or display time correctly.**
+--------------------``````-----------------------------------------------------------------------_____________________________________________________________________________--------------------
+
+We're going to learn these pattern letters one by one:
+
+Pattern	Meaning	        Example
+d       Day             5
+dd  	Day	            11
+MM  	Month(number)	07
+MMM 	Short month	    Jul
+MMMM   	Full month	    July
+yy	    2-digit year	26
+yyyy	4-digit year	2026
+HH	    Hour (24-hour)	19
+hh	    Hour (12-hour)	07
+mm	    Minutes	        30
+ss	    Seconds	        15
+a	    AM/PM	        PM
+E	    ShortDay Name	Sat
+EEE	    ShortDay Name	Sat
+EEEE	Full Day Name	Saturday
