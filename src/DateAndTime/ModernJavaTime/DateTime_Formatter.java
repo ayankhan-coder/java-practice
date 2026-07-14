@@ -1,11 +1,11 @@
 package DateAndTime.ModernJavaTime;
 
-import java.sql.Time;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.Locale;
 
 public class DateTime_Formatter {
     public static void main(String[] args) {
@@ -48,6 +48,26 @@ public class DateTime_Formatter {
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("HH:mm:ss a dd-MMMM-yy");
         System.out.println(ldt2.format(formatter1));
 
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@ PARSING METHOD Very Important @@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+        String myDate = "10/06/2008";
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate localDate = LocalDate.parse(myDate,dateTimeFormatter);
+        System.out.println(localDate);
+
+
+       String myTime = "06:30 AM";
+       DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("hh:mm a",Locale.ENGLISH);
+       LocalTime localTime = LocalTime.parse(myTime,dateTimeFormatter1);
+        System.out.println(localTime);
+
+       String myDateTime = "10/12/2025 07:30 AM";
+       DateTimeFormatter dtf5 = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a",Locale.ENGLISH);
+        LocalDateTime localDateTime = LocalDateTime.parse(myDateTime,dtf5);
+        System.out.println(localDateTime);
+        DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a");
+        System.out.println(localDateTime.format(myFormatter));
 
     }
 }
