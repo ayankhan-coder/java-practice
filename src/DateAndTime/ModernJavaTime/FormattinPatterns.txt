@@ -1,0 +1,42 @@
+📅 Date Patterns
+Pattern         Meaning	                    Example
+
+d           	Day (no leading zero)	    5
+dd          	Day (2 digits)	            05
+M           	Month (no leading zero)	    7
+MM          	Month (2 digits)	        07
+MMM         	Short Month Name	        Jul
+MMMM           	Full Month Name	            July
+yy          	2-digit Year	            26
+yyyy        	4-digit Year	            2026
+E	            Short Day Name	            Mon
+EEEE	        Full Day Name	            Monday
+
+
+⏰ Time Patterns
+Pattern     	Meaning         	                Example
+
+H	            Hour (24-hour, no leading zero)     7
+HH	            Hour (24-hour)	                    07
+h	            Hour (12-hour, no leading zero)	    7
+hh	            Hour (12-hour)	                    07
+m	            Minute (no leading zero)	        5
+mm	            Minute (2 digits)	                05
+s	            Second (no leading zero)	        8
+ss	            Second (2 digits)	                08
+a	            AM / PM	                            AM
+
+
+🌟 Combined Patterns (Most Used)
+Pattern	                    ExampleOutput
+
+dd/MM/yyyy	                13/07/2026
+MM-dd-yyyy	                07-13-2026
+yyyy-MM-dd	                2026-07-13
+dd-MMM-yyyy	                13-Jul-2026
+dd-MMMM-yyyy	            13-July-2026
+EEEE, dd MMMM yyyy	        Monday, 13 July 2026
+HH:mm:ss	                18:45:30
+hh:mm:ss a	                06:45:30 PM
+dd/MM/yyyy HH:mm:ss	        13/07/2026 18:45:30
+dd-MMM-yyyy hh:mm:ss a	    13-Jul-2026 06:45:30 PM
