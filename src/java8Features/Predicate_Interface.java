@@ -1,4 +1,4 @@
-package advanceCore.java8Features;
+package java8Features;
 
 import java.util.Scanner;
 import java.util.function.Predicate;

@@ -1,5 +1,4 @@
-package advanceCore.java8Features;
-import com.sun.tools.jconsole.JConsoleContext;
+package java8Features;
 
 import java.util.function.Consumer;
 
