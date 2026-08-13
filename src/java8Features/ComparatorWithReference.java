@@ -1,9 +1,6 @@
 package java8Features;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 class Employee{
     String name;
@@ -66,6 +63,18 @@ public class ComparatorWithReference {
                         .thenComparing(Employee::getId)
         );
         System.out.println(employees);
+
+
+        List<String> names = new ArrayList<>(List.of("Zara","Ayan","Bilal"));
+        names.sort(Comparator.naturalOrder());                                //naturalOrder
+        System.out.println(names);
+
+        names.sort(Comparator.reverseOrder());                                 //reverseOrder
+        System.out.println(names);
+
+//        names.sort(Comparator.nullsFirst(Comparator.naturalOrder()));        //nullsFirst
+//        System.out.println(names);
+
 
     }
 }

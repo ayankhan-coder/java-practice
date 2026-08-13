@@ -15,6 +15,17 @@ class Student{
         this.rollNum = rollNum;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public int getRollNum() {
+        return rollNum;
+    }
 }
 
 public class ComparatorWithLambda {
@@ -26,6 +37,14 @@ public class ComparatorWithLambda {
         students.add(new Student("zakmal",40,26));
         students.add(new Student("hussain",690,8));
 
+        Comparator<Student> comparator = (s1,s2) -> Integer.compare(s2.marks,s1.marks);//ComparatorStoredInVariable
+        Collections.sort(students,comparator);
+        for (Student student: students){
+            System.out.println(student.rollNum+"-"+student.name+"-"+student.marks);
+        }
+
+
+
         while (true){
             System.out.println("1-SortByRoll 2-SortMarks 3-SortNameA-Z 4-SortNameZ-A ");
             System.out.print("Enter the Option : ");
@@ -33,7 +52,7 @@ public class ComparatorWithLambda {
 
             switch (choice){
                 case 1:
-                    students.sort((r1,r2) -> Integer.compare(r1.rollNum,r2.rollNum)); //Comparator
+                    students.sort((r1,r2) -> Integer.compare(r1.rollNum,r2.rollNum)); //InLineComparator
                     for (Student student: students){
                         System.out.println(student.rollNum+"-"+student.name+"-"+student.marks);
                     }
@@ -60,6 +79,5 @@ public class ComparatorWithLambda {
 
             }
         }
-
     }
 }

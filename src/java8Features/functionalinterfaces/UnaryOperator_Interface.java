@@ -6,11 +6,11 @@ import java.util.function.UnaryOperator;
 public class UnaryOperator_Interface {
     public static void main(String[] args) {
 
-        Function<Integer,Integer> function = num -> num * num;
-        System.out.println(function.apply(10));
+//        Function<Integer,Integer> function = num -> num * num;// instead of this we use UnaryOperator
+//        System.out.println(function.apply(10));
 
         UnaryOperator<Integer> unaryOperator = num -> num * num;
-        System.out.println(function.apply(10));
+        System.out.println(unaryOperator.apply(10));
 
         UnaryOperator<String> upper = String::toUpperCase;
         System.out.println(upper.apply("ayan"));

@@ -1,4 +1,4 @@
-package java8Features;
+package java8Features.functionalinterfaces;
 
 import java.time.LocalDateTime;
 import java.util.function.Supplier;

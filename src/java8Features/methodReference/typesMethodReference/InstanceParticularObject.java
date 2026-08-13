@@ -2,8 +2,8 @@ package java8Features.methodReference.typesMethodReference;
 
 /* Reference to an instance method of a particular object*/
 
-/*In Java, a reference to an instance method of a particular object is a type of method
-reference where you refer to a non-static method of a specific object using the :: operator.
+/*a reference to an instance method of a particular object is a type of
+method reference where the method is called on a specific object that already exists.
  */
 
 import java.util.function.Function;
