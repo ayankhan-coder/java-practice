@@ -1,0 +1,56 @@
+1: what is Stream Api?
+Stream is an interface,a Stream is a way to process a sequence of data(such as elements from a List, Set, or array)
+in a clean and functional style.
+A Stream is generally single-use.Once you consume that Stream with a terminal operation, you cannot reuse the
+same Stream object.You can, however, create a new Stream from the original Collection.
+
+2: What is Stream PipeLine?
+A Stream pipeline means: A sequence of Stream operations used to process data.
+Source -> Operation -> Operation -> Operation -> FinalOperation
+
+3: Intermediate Operation :-> Operations that continue the pipeline.
+
+4: Terminal operation :-> The operation that finishes the pipeline.
+
+              /* ------Methods------ */
+
+1: filter()  -> filter() is an intermediate operation in a Java Stream is used to select
+                only the elements that satisfy a condition. filter() takes Predicate.
+2: forEach() -> is a terminal operation used to perform an action on every element of a stream.it is a Consumer.
+3: map()     -> it is an intermediate Stream operation that transforms each element of a stream into another
+                value using a given function. it is a Function
+4:collect() Collector.ToList  -> Collectors.toList() is used to collect the elements of a Stream into a List. we can
+                                 also use .List directly
+5: sorted()  -> it is an intermediate operation used to sort the elements of a stream.To sort in reverse order
+                we have to use Comparator in the sorted method
+6: distinct() -> s an intermediate operation used to remove duplicate elements from a stream.
+7:limit()    -> it returns only the first(n) elements
+8:skip()     -> it skips only the first(n) elements
+9:count()    -> it is a terminal operation that returns/counts numbers of elements in the stream as long
+10:min()     -> The min() method is used to find the smallest element in a Stream according to a given Comparator.
+11:max()     -> The min() method is used to find the biggest element in a Stream according to a given Comparator.
+                and along with min and max we use Optional.
+Optional     -> is a container object that may contain a non-null value or may be empty.It is mainly used
+to avoid null values and NullPointerException.
+12:findFirst() -> findFirst() is a Stream method used to find and return the first element of a Stream.
+                  It returns an Optional because the Stream might be empty.
+13:findAny()  -> findAny() is a Stream method used to return any one element from the Stream.
+                 It returns an Optional because the Stream might be empty.
+14:anyMatch() -> anyMatch() checks whether at least one element in the Stream satisfies a given condition.
+                 It returns a boolean (true or false), not an Optional.
+15:matchAll() -> allMatch() checks whether all elements in the Stream satisfy a given condition.
+                 It returns a boolean (true or false).
+16:noneMatch() -> noneMatch() checks whether none of the elements in the Stream satisfy a given condition.
+17:reduce()   -> reduce() is used to combine all elements of a stream into a single result.
+18:peek()    -> is an intermediate operation peek() lets you observe elements as they pass through the pipeline.
+19:flatMap() -> is an intermediate operation that transforms each element into a stream of elements and then
+                combines (flattens) all those streams into a single stream.
+                map() → transforms each element   flatMap() → transforms each element AND flattens the result
+20:takeWhile() -> is an intermediate operation that takes elements from the stream as long as a given condition is true.
+                  Once the condition becomes false, it stops processing further elements.
+21:dropWhile() ->  intermediate that skips elements from the beginning of the stream as long as a given condition is true.
+                   Once the condition becomes false, it keeps that element and all remaining elements.
+
+
+
+
