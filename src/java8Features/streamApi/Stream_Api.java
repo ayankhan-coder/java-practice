@@ -1,11 +1,8 @@
 package java8Features.streamApi;
 
-import javax.swing.text.html.Option;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
+
 class Student{
     private String name;
     private int rollNum;
@@ -187,6 +184,34 @@ public class Stream_Api {
                 .dropWhile(n-> n < 40)                        // dropWhile
                 .toList();
         System.out.println(result3);
+
+
+        System.out.println("_______ PRIMITIVE STREAM _______");
+        /* INT STREAM */
+
+        int total =
+                students.stream()
+                        .mapToInt(Student::getMarks)
+                        .sum();
+        System.out.println(total);
+
+        OptionalDouble average = students.stream()
+                .mapToInt(Student::getMarks)
+                .average();
+        System.out.println(average);
+
+        OptionalInt minimum =
+                students.stream()
+                        .mapToInt(Student::getMarks)
+                        .min();
+        System.out.println(minimum);
+
+        OptionalInt max =
+                students.stream()
+                        .mapToInt(Student::getMarks)
+                        .max();
+        System.out.println(max);
+
 
 
 
